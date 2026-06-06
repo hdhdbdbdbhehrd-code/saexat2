@@ -1,12 +1,14 @@
 {
   "buildCommand": "bun run build",
-  "installCommand": "bun install",
   "outputDirectory": "dist/client",
-  "functions": {
-    "api/server.mjs": { "runtime": "nodejs20.x" }
-  },
   "rewrites": [
-    { "source": "/assets/(.*)", "destination": "/assets/$1" },
-    { "source": "/(.*)", "destination": "/api/server" }
+    {
+      "source": "/assets/(.*)",
+      "destination": "/assets/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/api/server"
+    }
   ]
 }
